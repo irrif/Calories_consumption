@@ -41,7 +41,6 @@ differents_act = activities.groupby("Type d'activité").count()["Date"]
 
 """ Change Date to datetime dtype """
 activities["Date"] = pd.to_datetime(activities["Date"])
-print(activities.columns)
 
 """ Change Durée in minutes """
 activities["Durée"] = activities["Durée"].apply(convert_duration)
